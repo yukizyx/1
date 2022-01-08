@@ -1,21 +1,30 @@
 import tcod
 
-from actions import EscapeAction, MovementAction
+from engine import Engine
 from input_handlers import EventHandler
+from entity import Entity
+from game_map import GameMap
 
 def main() -> None:
     screen_width = 80
     screen_height = 50
     
-    # Define the coordinate of player's position
-    player_x = int(screen_width / 2)
-    player_y = int(screen_height / 2)
+    map_width = 80
+    map_height = 45
 
     tileset = tcod.tileset.load_tilesheet(
         "dejavu10x10_gs_tc.png", 32, 8, tcod.tileset.CHARMAP_TCOD
     )
 
     event_handler = EventHandler()
+
+    player = Entity(int(screen_width / 2), int(screen_height / 2), "@", (255, 255, 255))
+    npc = Entity(int(screen_width / 2 - 5), int(screen_height / 2), "@", (255, 255, 0))
+    entities = {npc, player}
+    
+    game_map = GameMap(map_width, map_height)
+
+    engine = Engine(entities = entities, event_handler = event_handler, game_map = game_map, player = player)
 
     # Create the screen
     with tcod.context.new_terminal(
@@ -29,28 +38,11 @@ def main() -> None:
         
         # Start the game loop
         while True:
-            # Find a place for @ in the coordinates (x, y) on the screen
-            root_console.print(x = player_x, y = player_y, string="@")
-            
-            # Update and display on the screen
-            context.present(root_console)
-            
-            # Remove the trace
-            root_console.clear()
+            engine.render(console = root_console, context = context)
 
-            for event in tcod.event.wait():
-                action = event_handler.dispatch(event)
-                
-                if action is None:
-                    continue
+            events = tcod.event.wait()
 
-                if isinstance(action, MovementAction):
-                    player_x += action.dx
-                    player_y += action.dy
-
-                elif isinstance(action, EscapeAction):
-                    raise SystemExit()
-
+            engine.handle_events(events)
 
 if __name__ == "__main__":
     main()
