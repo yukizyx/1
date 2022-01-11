@@ -22,6 +22,11 @@
 > pip install tcod
 ```
 
+** Operations
+
+- To play with 4 directions: press direction keys to move
+- To play with 8 directions: press `A`, `W`, `S`, `D` to move along the axis, press `Q`, `E`, `Z, `C` to move along the diagonals.
+- To see a log of all past messages: press `V`
 
 ## Reference
 
