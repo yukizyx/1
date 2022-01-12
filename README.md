@@ -22,11 +22,15 @@
 > pip install tcod
 ```
 
-** Operations
+## Operations
 
 - To play with 4 directions: press direction keys to move
 - To play with 8 directions: press `A`, `W`, `S`, `D` to move along the axis, press `Q`, `E`, `Z, `C` to move along the diagonals.
 - To see a log of all past messages: press `V`
+- To pick up items: press `G`
+- To drop items: press `H`
+- To open inventory: press `I`
+- To select and index inventory: press `A-Z` (press `B` to select the second item in the inventory)
 
 ## Reference
 
