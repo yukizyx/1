@@ -31,6 +31,8 @@
 - To drop items: press `H`
 - To open inventory: press `I`
 - To select and index inventory: press `A-Z` (press `B` to select the second item in the inventory)
+- To go to the next floor: press `>` on the `>` tile in the map
+- To check the character information: press `C`
 
 ## Reference
 
