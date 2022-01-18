@@ -1,17 +1,27 @@
 # My First Roguelike
 
-*A python project of my first roguelike game, including source code and design specification.*
+*A python project of an old-fashion roguelike game, including source code and game descriptions.*
 
 - Category: Python
 
 - Keyword: 
-  - ...
-- Date: ...
+  - Python objected-oriented programming
+  - Visualization
+  - Game design
+  - File manipulation
+- Date: January, 2022
 
 ## Table of Contents
 
 
 ## Description
+
+This project is an implementation of a traditional roguelike game with elements such as generated levels of dungeon, turn-based gameplay, randomly placed items and permanent death of the player.
+It also allows auto save when exiting a unfinished game, but only one game load is allowed.
+
+The appearance of the game is not traditional, color schemes are used instead of the characters to make the entire game look nicer.
+
+The current design and implementation is simple, but allows further modifications and additional features.
 
 ## Usage
 
@@ -24,15 +34,30 @@
 
 ## Operations
 
+### Character info
+
+- To check the character information: press `C`
+
+### Movements
+
 - To play with 4 directions: press direction keys to move
-- To play with 8 directions: press `A`, `W`, `S`, `D` to move along the axis, press `Q`, `E`, `Z`, `C` to move along the diagonals.
+- To play with 8 directions: use the numpad, press `2`, `4`, `6`, `8` to move along the axis, press `1`, `3`, `7`, `9` to move along the diagonals.
+
+### In-game message log
+
 - To see a log of all past messages: press `V`
+
+### Items and inventory
+
 - To pick up items: press `G`
 - To drop items: press `H`
 - To open inventory: press `I`
 - To select and index inventory: press `A-Z` (press `B` to select the second item in the inventory)
+
+### Next level
+
 - To go to the next floor: press `>` on the `>` tile in the map
-- To check the character information: press `C`
+
 
 ## Reference
 
