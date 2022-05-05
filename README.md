@@ -13,6 +13,17 @@
 
 ## Table of Contents
 
+- [My First Roguelike](#my-first-roguelike)
+  * [Table of Contents](#table-of-contents)
+  * [Description](#description)
+  * [Usage](#usage)
+  * [Operations](#operations)
+    + [Character info](#character-info)
+    + [Movements](#movements)
+    + [In-game message log](#in-game-message-log)
+    + [Items and inventory](#items-and-inventory)
+    + [Next level](#next-level)
+  * [Reference](#reference)
 
 ## Description
 
